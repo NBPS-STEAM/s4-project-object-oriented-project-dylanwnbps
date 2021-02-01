@@ -7,4 +7,19 @@ public class Tree {
     type = mType;
   }
   
+  public double getHeight() {
+    return height;
+  }
+  
+  public String getType() {
+  	return type;
+  }
+  
+  public void setHeight(double newHeight) {
+    height = newHeight;
+  }
+  
+  public void setType(String newType) {
+  	type = newType;
+  }
 }
