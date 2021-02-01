@@ -2,9 +2,14 @@ public class Monkey {
   private String size;
   private String mood;
   
-  public Tree(String mSize, String mMood) {
+  public Monkey(String mSize, String mMood) {
   	size = mSize;
     mood = mMood;
+  }
+  
+  public Monkey(String mMood) {
+  	mood = mMood;
+    size = "Small"; // overloading constructor
   }
   
   public String getMood() {

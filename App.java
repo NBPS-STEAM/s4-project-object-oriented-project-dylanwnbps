@@ -22,7 +22,16 @@ public class App {
           return;
           }
           else {
-          System.out.println("You hide until the car passes. You survived!");
+            System.out.println("You hide until the car passes. While you're hiding, you feel something move in the shadows next to you. You turn around and spot a monkey! Guess the monkey's mood (Mad/Sad/Happy");
+            String moodGuess = scanner.next();
+            Monkey monkey = new Monkey("Happy");
+            String correctMood = monkey.getMood();
+            if (!moodGuess.equals(correctMood)) {
+            	monkey.setMood("Mad");
+              	System.out.println("You didn't guess the mood correctly. The monkey gets mad!");
+            }
+            else {
+                System.out.println("You guessed the mood correctly. The monkey hands you a banana.");
           }
         }
         else {
@@ -54,12 +63,12 @@ public class App {
           guesses ++;
           }
           if (colorGuess.equals(correctType)){ // if else statement
-          System.out.println("You got it right!");
+          	System.out.println("You got it right!");
           }
-         else { System.out.println("Game Over."); 
-         return;
-
+         else { 
+           System.out.println("Game Over."); 
          }
+         System.out.println("You ran across " + Tree.getTreeCount() + " trees totally.");
        }
      }
     }
