@@ -32,6 +32,7 @@ public class App {
             }
             else {
                 System.out.println("You guessed the mood correctly. The monkey hands you a banana.");
+            }
           }
         }
         else {
@@ -47,28 +48,28 @@ public class App {
          while (!typeGuess.equals(tree.getType()) && (guesses < totalChance)){ // while loop + compound boolean expression
             int remainingChance = totalChance - guesses;
             System.out.println("Wrong. Please guess the tree height. Pick a number (20, 40, or 60.");
-            int numberGuess = scanner.nextInt();
+            double numberGuess = scanner.nextDouble();
             int totalAvailableNumberGuess = 3;
-            int correctNumber = tree.getHeight();
+            double correctNumber = tree.getHeight();
             for (int i = 1; i < totalAvailableNumberGuess; i++) { // for loop line 40 and it's a nesting loop because it's within the while loop 
               if (numberGuess == correctNumber) {
             System.out.println("You got it right! You win.");
                  return;
               }
             System.out.println("Wrong again. Please try again.");
-            numberGuess = scanner.nextInt();
+            numberGuess = scanner.nextDouble();
           }
             System.out.println("You have run out of attempts. Please try to guess the type again.");
-          colorGuess = scanner.next();
+          typeGuess = scanner.next();
           guesses ++;
           }
-          if (colorGuess.equals(correctType)){ // if else statement
+          if (typeGuess.equals(correctType)){ // if else statement
           	System.out.println("You got it right!");
           }
          else { 
            System.out.println("Game Over."); 
          }
-         System.out.println("You ran across " + Tree.getTreeCount() + " trees totally.");
+         System.out.println("You ran across " + Tree.getTreeCount() + " trees total.");
        }
      }
     }
