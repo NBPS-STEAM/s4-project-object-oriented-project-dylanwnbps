@@ -7,4 +7,18 @@ public class Monkey {
     mood = mMood;
   }
   
+  public String getMood() {
+    return mood;
+  }
+  
+  public String getSize() {
+    return size;
+  }
+      public void setMood(String newMood) {
+    mood = newMood;
+  }
+  
+  public void setSize(String newSize) {
+  	size = newSize;
+  }
 }
