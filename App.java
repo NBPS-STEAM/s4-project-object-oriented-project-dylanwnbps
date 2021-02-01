@@ -26,20 +26,21 @@ public class App {
           }
         }
         else {
-          System.out.println("You branch out toward the forest. Oh no! You fell into a hole! Guess what color I have in mind so I can help you get out. You have three guesses before you die of starvation(Green/Yellow/Red/Purple");
-          String colorGuess = scanner.next();
-          String correctColor = "Red";
+          System.out.println("You walk toward the forest. Oh no! You approach a large tree! Guess what type the tree is. You have three guesses (Cypress/Beech/Pine)");
+          String typeGuess = scanner.next();
+          Tree tree = new Tree(60, "Cypress");
+          String correctType = tree.getType();
           
           
           int guesses = 1;
           int totalChance = 3;
           
-         while (!colorGuess.equals(correctColor) && (guesses < totalChance)){ // while loop + compound boolean expression
+         while (!typeGuess.equals(tree.getType()) && (guesses < totalChance)){ // while loop + compound boolean expression
             int remainingChance = totalChance - guesses;
-            System.out.println("Wrong. If you can guess my number then I will save you. Pick a number 1-5.");
+            System.out.println("Wrong. Please guess the tree height. Pick a number (20, 40, or 60.");
             int numberGuess = scanner.nextInt();
             int totalAvailableNumberGuess = 3;
-            int correctNumber = 2;
+            int correctNumber = tree.getHeight();
             for (int i = 1; i < totalAvailableNumberGuess; i++) { // for loop line 40 and it's a nesting loop because it's within the while loop 
               if (numberGuess == correctNumber) {
             System.out.println("You got it right! You win.");
@@ -48,14 +49,14 @@ public class App {
             System.out.println("Wrong again. Please try again.");
             numberGuess = scanner.nextInt();
           }
-            System.out.println("You have run out of attempts. Please try to guess the color again.");
+            System.out.println("You have run out of attempts. Please try to guess the type again.");
           colorGuess = scanner.next();
           guesses ++;
           }
-          if (colorGuess.equals(correctColor)){ // if else statement
+          if (colorGuess.equals(correctType)){ // if else statement
           System.out.println("You got it right!");
           }
-         else { System.out.println("You died."); 
+         else { System.out.println("Game Over."); 
          return;
 
          }
