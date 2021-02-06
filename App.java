@@ -51,7 +51,7 @@ public class App {
             double numberGuess = scanner.nextDouble();
             int totalAvailableNumberGuess = 3;
             double correctNumber = tree.getHeight();
-            for (int i = 1; i < totalAvailableNumberGuess; i++) { // for loop line 40 and it's a nesting loop because it's within the while loop 
+            for (int i = 1; i < totalAvailableNumberGuess; i++) { // for loop and it's a nesting loop because it's within the while loop 
               if (numberGuess == correctNumber) {
             System.out.println("You got it right! You win.");
                  return;
